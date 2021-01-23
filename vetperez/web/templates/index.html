@@ -1,0 +1,20 @@
+{% extends "landing.layout.html" %}
+
+{% load static %}
+
+{% block 'body' %}
+<div class="card mb-3 d-flex align-items-center" style="width: 100%;height: 76vh; border: none;">
+  <div class="row g-0" style="height: 76vh;">
+      <div class="col-md-8 align-self-center" style="display: table-cell; vertical-align: middle;">
+          <div class="card-body">
+              <h2 class="card-title">Somo importadores directos</h2>
+              <p class="card-text">Productos veterinarios en las mejores marcas para el cuidado de las mascotas y producción pecuaria</p>
+              <p class="card-text"><small class="text-muted">los mejores del mercado</small></p>
+            </div>
+        </div>
+        <div class="col-md-4 align-self-center">
+          <img src="{%  static 'images/vet.png' %}" width="453px">
+        </div>
+    </div>
+</div>
+{% endblock %}

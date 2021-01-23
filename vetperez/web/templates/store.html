@@ -1,0 +1,81 @@
+{% extends "landing.layout.html" %}
+
+{% load static %}
+
+{% block 'body' %}
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-2 sticky-top">
+        <ul class="nav flex-column">
+            <h5 class="card-title p-2 text-primary">Alimentos</h5>
+            <li class="nav-item">
+                <a class="nav-link btn text-start" href="#">para Perros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn text-start" href="#">para Gatos</a>
+            </li>
+        </ul>
+        <ul class="nav flex-column">
+            <h5 class="card-title p-2 text-primary">Productos</h5>
+            <li class="nav-item">
+                <a class="nav-link btn text-start" href="#">Juguetes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn text-start" href="#">Comedores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn text-start" href="#">Collares</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn text-start" href="#">Farmacia</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-10" style="overflow-y: auto;">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="{% static 'images/product.png'%}" class="card-img-top" >
+                <div class="card-body">
+                  <h5 class="card-title">Nombre del Producto</h5>
+                  <p class="card-text"><strong>Precio:</strong>S/100.00</p>
+                  <a href="/carrito" class="btn-success btn">Comprar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="{% static 'images/product.png'%}" class="card-img-top" >
+                <div class="card-body">
+                  <h5 class="card-title">Nombre del Producto</h5>
+                  <p class="card-text"><strong>Precio:</strong>S/100.00</p>
+                  <a href="/carrito" class="btn-success btn">Comprar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="{% static 'images/product.png'%}" class="card-img-top" >
+                <div class="card-body">
+                  <h5 class="card-title">Nombre del Producto</h5>
+                  <p class="card-text"><strong>Precio:</strong>S/100.00</p>
+                  <a href="/carrito" class="btn-success btn">Comprar</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="{% static 'images/product.png'%}" class="card-img-top" >
+                <div class="card-body">
+                  <h5 class="card-title">Nombre del Producto</h5>
+                  <p class="card-text"><strong>Precio:</strong>S/100.00</p>
+                  <a href="/carrito" class="btn-success btn">Comprar</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 100px;"></div>
+  </div>
+</div>
+{% endblock %}

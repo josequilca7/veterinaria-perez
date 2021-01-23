@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block 'title'%}Veterinaria Pérez{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="shortcut icon" href="{%  static 'images/logo.png' %}">
+  {% block 'head'%}
+  {% endblock %}
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img src="{%  static 'images/logo.png' %}" style="width: 32px;"> Veterinaria Pérez</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex flex-row-reverse">
+          <li class="nav-item">            
+            <li class="nav-item text-end">
+              <a class="nav-link" href="/registrarse">Crear cuenta</a>
+            </li>
+          <li class="nav-item text-end">
+            <a class="nav-link" href="/ingresar">Iniciar Sesión</a>
+          </li>
+          <li class="nav-item text-end">
+            <a class="btn btn-success text-light" href="/carrito"> 🛒 carrito</a>
+          </li>
+          <li class="nav-item text-end">
+            <a class="btn btn-light me-2" href="/favoritos">❤</a>
+          </li>
+            <form class="d-flex">
+              <input class="form-control me-2 ms-5" style="width: 453px;" type="search" placeholder="⌕ Search" aria-label="Search">
+              <button class="btn btn-outline-primary visually-hidden" type="submit">Search</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <ul class="nav navbar-light bg-light justify-content-center nav-tabs nav-justified">
+    <li class="nav-item">
+      <a class="nav-link text-decoration-none text-dark" aria-current="page" href="/">Inicio</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-decoration-none text-dark" href="/quienes-somos">¿Quienes somos?</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-decoration-none text-dark" href="/productos">Productos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-decoration-none text-dark" href="/contactanos">Contactanos</a>
+    </li>
+  </ul>
+  {% block 'body' %}
+  {% endblock %}
+  
+  
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  {% block 'scripts' %}
+  {% endblock %}
+  <div class="fixed-bottom d-flex justify-content-center">
+    <a class="card rounded-circle p-1 shadow m-2" href="#"><img src="{%  static 'images/smp.svg' %}" width="64px"></a>
+    <a class="card rounded p-1 shadow m-2" href="#"><img src="{%  static 'images/fa.svg' %}" width="64px"></a>
+    <a class="card rounded-circle p-1 shadow m-2" href="#"><img src="{%  static 'images/wsp.svg' %}" width="64px"></a>
+  </div>
+</body>
+</html>

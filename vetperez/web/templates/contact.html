@@ -1,0 +1,44 @@
+{% extends "landing.layout.html" %}
+
+{% load static %}
+
+{% block 'body' %}
+<h2 class="w-100 text-center">Contactenos</h2>
+<div class="row align-items-start">
+    <div class="col m-5">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" >
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Telefono</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+    </div>
+    <div class="col">
+        <iframe class="mt-5 mb-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6564.492279383043!2d-75.2858754284011!3d-11.95576689162649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910ebed27b34f9cb%3A0x466df4804cdbb46d!2sSan%20Jer%C3%B3nimo%2C%2012116!5e0!3m2!1ses-419!2spe!4v1611370462876!5m2!1ses-419!2spe" width="400" height="255" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="card mb-3 text-end border-0" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Para su comodidad</h5>
+                        <p class="card-text">aceptamos tarjetas de credito o debito</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'images/visa.png'%}" height="100px" width="200px" style="object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div style="height: 100px;"></div>
+{% endblock %}

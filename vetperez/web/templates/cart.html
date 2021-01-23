@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria Pérez</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="shortcut icon" href="{%  static 'images/logo.png' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"><img src="{%  static 'images/logo.png' %}" style="width: 32px;"> Veterinaria Pérez</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex flex-row-reverse">
+              <li class="nav-item">            
+                <li class="nav-item text-end">
+                  <a class="nav-link" href="/registrarse">Crear cuenta</a>
+                </li>
+              <li class="nav-item text-end">
+                <a class="nav-link" href="/ingresar">Iniciar Sesión</a>
+              </li>
+              <li class="nav-item text-end">
+                <a class="nav-link btn btn-success text-light" href="/carrito"> 🛒 carrito</a>
+              </li>
+              <li class="nav-item text-end">
+                <a class="btn btn-light me-2" href="/favoritos">❤</a>
+              </li>
+                <form class="d-flex">
+                  <input class="form-control me-2 ms-5" style="width: 453px;" type="search" placeholder="⌕ Search" aria-label="Search">
+                  <button class="btn btn-outline-primary visually-hidden" type="submit">Search</button>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+<div class="container">
+    <table class="table align-middle">
+        <thead>
+            <tr>
+                <th scope="col" colspan="5">carrito de Compras</th>
+            </tr>
+        </thead>
+        <tbody class="table table-borderless">
+            <tr>
+                <th scope="row"><img src="{% static 'images/product.png' %}" width="412px" class="shadow"></th>
+                <td>Nombre del producto</td>
+                <td style="width: 100px;"><div>Cantidad <br><input class="form-control btn" min="1" type="number"/></div></td>
+                <td>Precio <br> S/100.00</td>
+                <td><div><button class="btn btn-outline-danger m-2">🗑 eliminar</button></div></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">total</th>
+                <th colspan="2">100.00</th>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="d-flex justify-content-between">
+        <a href="/tienda" class="btn btn-primary">Agregar mas productos</a>
+        <button class="btn btn-success">Comprar</button>
+    </div>
+</div>
+    <div class="fixed-bottom d-flex justify-content-center">
+        <a class="card rounded-circle p-1 shadow m-2" href="#"><img src="{%  static 'images/smp.svg' %}" width="64px"></a>
+        <a class="card rounded p-1 shadow m-2" href="#"><img src="{%  static 'images/fa.svg' %}" width="64px"></a>
+        <a class="card rounded-circle p-1 shadow m-2" href="#"><img src="{%  static 'images/wsp.svg' %}" width="64px"></a>
+    </div>
+</body>
+</html>
